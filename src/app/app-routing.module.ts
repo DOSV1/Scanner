@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'pag-final/:scanResult',
+    loadChildren: () => import('./pag-final/pag-final.module').then( m => m.PagFinalPageModule)
+  },
 ];
 
 @NgModule({
